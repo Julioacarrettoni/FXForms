@@ -761,7 +761,7 @@ static void FXFormPreprocessFieldDictionary(NSMutableDictionary *dictionary)
         BOOL canGetFieldConfig = FXFormCanGetValueForKey(form, @"field.cellConfig");
         NSObject *typedObj = form;
         id formField = canGetField ? [typedObj valueForKey:@"field"] : nil;
-        id formFieldConfig = canGetFieldConfig ? [typedObj valueForKey:@"field.cellConfig"] : nil;
+        id formFieldConfig = canGetFieldConfig ? [typedObj valueForKeyPath:@"field.cellConfig"] : nil;
         if (formField && formFieldConfig) {
             _cellConfig = formFieldConfig;
         } else {
@@ -1431,7 +1431,7 @@ static void FXFormPreprocessFieldDictionary(NSMutableDictionary *dictionary)
     return self;
 }
 
-- (id)valueForKey:(NSString *)key
+- (id)valueForUndefinedKey:(NSString *)key
 {
     NSInteger index = [key integerValue];
     return @([self.field isOptionSelectedAtIndex:index]);
