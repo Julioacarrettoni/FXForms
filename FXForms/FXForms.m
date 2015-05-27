@@ -47,7 +47,6 @@ NSString *const FXFormFieldType = @"type";
 NSString *const FXFormFieldClass = @"class";
 NSString *const FXFormFieldCell = @"cell";
 NSString *const FXFormFieldTitle = @"title";
-NSString *const FXFormFieldDetail = @"detail";
 NSString *const FXFormFieldPlaceholder = @"placeholder";
 NSString *const FXFormFieldDefaultValue = @"default";
 NSString *const FXFormFieldOptions = @"options";
@@ -849,10 +848,6 @@ static void FXFormPreprocessFieldDictionary(NSMutableDictionary *dictionary)
     if (descriptionKey && [self.form respondsToSelector:NSSelectorFromString(descriptionKey)])
     {
         return [(NSObject *)self.form valueForKey:descriptionKey];
-    }
-    
-    if (self.detail) {
-        return self.detail;
     }
     
     if (self.options)
@@ -2710,7 +2705,7 @@ static void FXFormPreprocessFieldDictionary(NSMutableDictionary *dictionary)
     }
     else if ([self.field.type isEqualToString:FXFormFieldTypeBoolean] || [self.field.type isEqualToString:FXFormFieldTypeOption])
     {
-        self.detailTextLabel.text = self.field.detail;
+        self.detailTextLabel.text = nil;
         self.accessoryType = [self.field.value boolValue]? UITableViewCellAccessoryCheckmark: UITableViewCellAccessoryNone;
     }
     else if (self.field.action)
