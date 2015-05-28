@@ -43,6 +43,7 @@ UIKIT_EXTERN NSString *const FXFormFieldType; //type
 UIKIT_EXTERN NSString *const FXFormFieldClass; //class
 UIKIT_EXTERN NSString *const FXFormFieldCell; //cell
 UIKIT_EXTERN NSString *const FXFormFieldTitle; //title
+UIKIT_EXTERN NSString *const FXFormFieldDetail; //Detail
 UIKIT_EXTERN NSString *const FXFormFieldPlaceholder; //placeholder
 UIKIT_EXTERN NSString *const FXFormFieldDefaultValue; //default
 UIKIT_EXTERN NSString *const FXFormFieldOptions; //options
@@ -109,6 +110,7 @@ UIKIT_EXTERN NSString *const FXFormFieldTypeImage; //image
 @property (nonatomic, readonly) NSString *key;
 @property (nonatomic, readonly) NSString *type;
 @property (nonatomic, readonly) NSString *title;
+@property (nonatomic, readonly) NSString *detail;
 @property (nonatomic, readonly) id placeholder;
 @property (nonatomic, readonly) NSDictionary *fieldTemplate;
 @property (nonatomic, readonly) BOOL isSortable;
