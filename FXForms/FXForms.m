@@ -1383,6 +1383,10 @@ static void FXFormPreprocessFieldDictionary(NSMutableDictionary *dictionary)
     }
 }
 
+- (void) reloadData {
+    [self.formController.tableView reloadData];
+}
+
 @end
 
 

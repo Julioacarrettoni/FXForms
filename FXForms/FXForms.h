@@ -128,6 +128,8 @@ UIKIT_EXTERN NSString *const FXFormFieldTypeImage; //image
 - (void)setOptionSelected:(BOOL)selected atIndex:(NSUInteger)index;
 - (BOOL)isOptionSelectedAtIndex:(NSUInteger)index;
 
+- (void) reloadData;
+
 @end
 
 
