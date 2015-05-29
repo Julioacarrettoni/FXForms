@@ -103,7 +103,7 @@ UIKIT_EXTERN NSString *const FXFormFieldTypeImage; //image
 
 @end
 
-
+@class FXFormController;
 @interface FXFormField : NSObject
 
 @property (nonatomic, readonly) id<FXForm> form;
@@ -120,6 +120,9 @@ UIKIT_EXTERN NSString *const FXFormFieldTypeImage; //image
 @property (nonatomic, readonly) void (^action)(id sender);
 @property (nonatomic, readonly) id segue;
 @property (nonatomic, strong) id value;
+
+@property (nonatomic, readonly, weak) FXFormController *formController;
+@property (nonatomic, readonly) NSMutableDictionary *cellConfig;
 
 - (NSUInteger)optionCount;
 - (id)optionAtIndex:(NSUInteger)index;

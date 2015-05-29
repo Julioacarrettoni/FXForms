@@ -660,8 +660,8 @@ static void FXFormPreprocessFieldDictionary(NSMutableDictionary *dictionary)
 @property (nonatomic, strong) id header;
 @property (nonatomic, strong) id footer;
 
-@property (nonatomic, weak) FXFormController *formController;
-@property (nonatomic, strong) NSMutableDictionary *cellConfig;
+@property (nonatomic, weak, readwrite) FXFormController *formController;
+@property (nonatomic, strong, readwrite) NSMutableDictionary *cellConfig;
 
 + (NSArray *)fieldsWithForm:(id<FXForm>)form controller:(FXFormController *)formController;
 - (instancetype)initWithForm:(id<FXForm>)form controller:(FXFormController *)formController attributes:(NSDictionary *)attributes;
