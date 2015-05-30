@@ -168,6 +168,7 @@ UIKIT_EXTERN NSString *const FXFormFieldTypeImage; //image
 - (void)registerViewControllerClass:(Class)controllerClass forFieldType:(NSString *)fieldType;
 - (void)registerViewControllerClass:(Class)controllerClass forFieldClass:(Class)fieldClass;
 
+- (void) reloadSectionsFromForm;
 
 @end
 

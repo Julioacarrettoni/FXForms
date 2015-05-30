@@ -2013,7 +2013,12 @@ static void FXFormPreprocessFieldDictionary(NSMutableDictionary *dictionary)
 {
     _form = form;
     self.sections = [FXFormSection sectionsWithForm:form controller:self];
+    [self reloadSectionsFromForm];
     [self.tableView reloadData];//So the form changes
+}
+
+- (void) reloadSectionsFromForm {
+    self.sections = [FXFormSection sectionsWithForm:_form controller:self];
 }
 
 - (NSUInteger)numberOfSections
